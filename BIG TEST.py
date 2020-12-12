@@ -255,5 +255,5 @@ var4.set(1)
 psd_box = Checkbutton(master, variable=var4, text='psd').grid(row=10, sticky=W)
 
 show_button = Button(master, text='show', command=plt_test).grid(row=11, sticky=W)
-save_button = Button(master, text='save', command=plt_test).grid(row=11, sticky=E)
+save_button = Button(master, text='save', command=plt_test).grid(row=11, sticky=E)  # create a function to save
 master.mainloop()
