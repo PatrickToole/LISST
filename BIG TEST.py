@@ -219,6 +219,20 @@ def plt_test():
     plt.show()
 
 
+def plt_save():  # make this actually savce
+    print(var1.get(), var2.get(), var3.get(), var4.get())
+    if var1.get() == 1:
+        plt.clf()
+        cont_zcons_plot(entr3.get(), entr2.get())
+    if var2.get() == 1:
+        tpc_plot()
+    if var3.get() == 1:
+        tpc_mean_plot(entr1.get())
+    if var4.get() == 1:
+        psd_plot()
+    plt.show()
+
+
 # ## GUI ###
 
 
@@ -255,5 +269,5 @@ var4.set(1)
 psd_box = Checkbutton(master, variable=var4, text='psd').grid(row=10, sticky=W)
 
 show_button = Button(master, text='show', command=plt_test).grid(row=11, sticky=W)
-save_button = Button(master, text='save', command=plt_test).grid(row=11, sticky=E)  # create a function to save
+save_button = Button(master, text='save', command=plt_save).grid(row=11, sticky=E)
 master.mainloop()
